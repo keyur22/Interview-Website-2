@@ -1,0 +1,249 @@
+*{
+	box-sizing: border-box;
+}
+
+/*Main Container*/
+.container-fluid{
+	padding: 0 15%;
+	background: linear-gradient(to bottom, rgba(255,0,0,0), #eafac9, #c6ef6d);
+}
+
+/*Header*/
+/*Header-top*/
+#header #header-top{
+	display: flex;
+	margin-bottom: 2%;
+}
+
+/*Right side of header-top*/
+#header #nav-options{
+	display: flex;
+	margin-left: auto;
+	margin-right: 3%;
+}
+
+#header #nav-options a{
+	display: inline-block;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: white;
+	font-family: arial, serif;
+	font-weight: bold;
+	font-size: 14px;
+	background: #7dbd1e;
+}
+
+#header #nav-options a:hover{
+	background: #9c9c9c;
+	transition: 0.3s;
+}
+
+.border-bottom-left{
+	border-bottom-left-radius: 8px;
+}
+
+.border-bottom-right{
+	border-bottom-right-radius: 8px;
+}
+
+/*Navigation bar of header*/
+#header .main-nav{
+	display: flex;
+}
+
+#header .main-nav div{
+	width: 14.285%;
+	background: #9c9c9c;
+	text-align: center;
+	padding: 8px 0;
+	border: 5px solid transparent;
+}
+
+#header .main-nav div:last-child{
+	display: none;
+}
+
+#header .main-nav div:not(:last-child){
+	margin-right: 1px;
+}
+
+#header .main-nav div:first-child{
+	background: #7dbd1e;
+	border: 5px solid #89d46f;
+}
+
+#header .main-nav a{
+	text-decoration: none;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;	
+	font-weight: bold;
+}
+
+#header .main-nav div:hover{
+	background: #7dbd1e;
+	border: 5px solid #89d46f;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+/*For responsive navbar*/
+#header .responsive div{
+	display: block!important;
+}
+
+/*Main Section*/
+/*Slider*/
+#main #slider{
+	width: 100%;
+	margin: 1% 0;
+}
+
+#main #slider #carousel{
+	width: 98%;
+	margin: 0 auto;
+}
+
+/*Sub Section containing song and map*/
+#main-sub{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1%;
+	background: white;
+}
+
+/*Songs Section*/
+#main #songs{
+	width: 33%;
+	padding: 1%;
+	font-family: arial;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	color: #555e4d;
+	line-height: 15px;
+	background: linear-gradient(to bottom, rgba(255,0,0,0), #c6ef6d);
+}
+
+#main #songs #song-logo{
+	width: 100%;
+	overflow: hidden;
+}
+
+#main #songs #song-logo img{
+	max-width: 100%;
+	height: auto;
+}
+
+#main #songs #sing-along{
+	color: #7e7e7c;
+	font-size: 14px;
+}
+
+.quote-start{
+	color: #e6fab2;
+	font-size: 15px;
+}
+
+.quote-end{
+	color: #e5fbb0;
+	font-size: 15px;
+}
+
+/*Map*/
+#main #main-sub #maps{
+	width: 67%;
+}
+
+/*Footer*/
+#footer{
+	padding: 10px 20px;
+	font-size: 13px;
+	font-family: arial;
+	color: white;
+	background: linear-gradient(#d4d4d4, #a4a4a4)
+}
+
+/*Screen less than 1200px*/
+@media only screen and (max-width: 1200px){
+
+	.container-fluid{
+		padding: 0 5%;
+	}
+
+}
+
+/*Screen less than 750px*/
+@media only screen and (max-width: 750px){
+
+	.container-fluid{
+		padding: 0 5%;
+	}
+
+	/*Header top*/
+	#header #header-top{
+		margin-bottom: 5%;
+	}
+
+	/*Right side of header-top*/
+	#header #nav-options{
+		flex-direction: column;
+		margin-right: 0;
+	}
+
+	.border-bottom-left{
+		border-bottom-left-radius: 0px;
+	}
+
+	.border-bottom-right{
+		border-bottom-right-radius: 0px;
+	}
+
+	#header #nav-options div:last-child a{
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+
+	#header #nav-options a{
+		display: block;
+		text-align: center;
+		padding: 8px 10px;
+		text-decoration: none;
+		color: white;
+		font-family: arial, serif;
+		font-weight: bold;
+		font-size: 10px;
+		background: #7dbd1e;
+	}
+
+	/*Nav Bar*/
+	#header .main-nav{
+		display: block;
+		position: relative;
+	}
+
+	#header .main-nav div:not(:last-child){
+		width: 100%;
+	}
+
+	#header .main-nav div:not(:first-child){
+		display: none;
+	}
+
+	#header .main-nav div:last-child{
+		display: block;
+		position: absolute;
+		top: 0; right: 0;
+	}
+
+	/*Songs*/
+	#main #main-sub #songs{
+		width: 100%;
+	}
+
+	/*Map*/
+	#main #main-sub #maps{
+		width: 100%;
+		height: 400px;
+	}
+}
